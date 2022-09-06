@@ -123,8 +123,9 @@ form {
     width: calc(4rem + 30vw);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
+    row-gap: calc(1rem + 2vh);
     column-gap: calc(2rem + 2vw);
+    margin-bottom: calc(1rem + 2vh);
 }
 
 .container div {
@@ -139,20 +140,41 @@ form {
 }
 
 .container input {
-    width: calc(10px + 15vw);
+    width: calc(.6rem + 15vw);
 }
 
 fieldset {
+    width: calc(4rem + 32vw);
     border: 1px solid black;
     position: relative;
+    margin-bottom: calc(1rem + 2vh);
 }
 
 legend {
     background-color: #ffefc1;
 }
 
+fieldset label {
+    font-size: calc(0.7rem + 0.4vw);
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: calc(1rem + 1vh);
+}
+
+.description label {
+    font-size: calc(0.7rem + 0.4vw);
+}
+
 textarea {
     resize: none;
-    width: 80%;
+    width: calc(4rem + 32vw);
     min-height: 20vh; 
+}
+
+button {
+    border-radius: .7rem;
 }
