@@ -84,6 +84,7 @@ body {
     color: white;
     font-weight: 100;
     font-size: clamp(.5rem, 2vw, 1rem);
+    padding: 5px;
 }
 
 .img-credit a,a:link,a:visited,a:focus,a:hover,a:active {
@@ -99,8 +100,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 60vw;
-    background: rgb(255,252,195);
-    background: linear-gradient(90deg, rgba(255,252,195,0.5984768907563025) 0%, rgba(255,229,201,1) 21%, rgba(255,200,235,0.8085609243697479) 100%);
+    background: rgb(255,200,215);
+background: linear-gradient(90deg, rgba(255,200,215,0.7035407913165266) 0%, rgba(255,227,206,0.6671262254901961) 67%, rgba(255,239,193,0.5802914915966386) 100%);
 }
 
 .intro , .email {
