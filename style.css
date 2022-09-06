@@ -38,7 +38,7 @@ body {
     flex-direction: row;
 }
 
-.side-bar {
+.left-column {
     width: 40vw;
     height: 100vh;
     background-image: url("img/breakfast-time.jpg");
@@ -95,7 +95,7 @@ body {
     font-style: italic;
 }
 
-.form-bar {
+.right-column {
     display: flex;
     flex-direction: column;
     width: 60vw;
