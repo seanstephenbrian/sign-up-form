@@ -36,21 +36,23 @@ html {
 body {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
 }
 
 .left-column {
     width: 40vw;
-    height: 100vh;
     background-image: url("img/breakfast-time.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .logo {
+    margin-top: calc(10rem + 10vh);
     background-color: rgba(0, 0, 0, 0.522);
     display: flex;
     justify-content: center;
@@ -58,7 +60,6 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     padding: 5px 5px;
-    margin-top: auto;
 }
 
 .logo-icon img {
@@ -78,7 +79,7 @@ body {
 
 .img-credit {
     background-color: rgba(0, 0, 0, 0.274);
-    margin-top: auto;
+    /* margin-top: auto; */
     text-align: center;
     font-family: Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
     color: white;
