@@ -1,0 +1,7 @@
+“Radius FG” is a new digitisation of the Art Nouveau hot-metal font “Radium”, published in 1905 by the German typefoundry Ludwig & Mayer.
+It became again popular in the 1970s after Hubertus Carl “Hace” Frey had reworked the bold weight under the new name “Charleston”. It is mainly found as a display typeface on period musical album covers.
+This version comes again with a regular and bold weight, both with extensive latin character sets for most Western and Eastern European languages, available under the SIL Open Font License. For details see https://scripts.sil.org/OFL
+
+Donations can be made via the dafont.com paypal link of the font. 
+
+There is also an extended with version of the bold weight under the name of “Lutherkirche FG”.
