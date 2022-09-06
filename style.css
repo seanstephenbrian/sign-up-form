@@ -21,7 +21,12 @@ time, mark, audio, video {
 
 @font-face {
     font-family: 'Radius';
-    src: url('font/radius.ttf') format('truetype');
+    src: url('font/radius/radius.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Torre Farfan';
+    src: url('font/torrefarfan/torrefarfan.ttf') format('truetype');
 }
 
 html {
@@ -86,7 +91,7 @@ body {
     color: white;
 }
 
-.img-title {
+.italic {
     font-style: italic;
 }
 
@@ -94,4 +99,12 @@ body {
     display: flex;
     flex-direction: column;
     width: 60vw;
+    background: rgb(255,252,195);
+    background: linear-gradient(90deg, rgba(255,252,195,0.5984768907563025) 0%, rgba(255,229,201,1) 21%, rgba(255,200,235,0.8085609243697479) 100%);
+}
+
+.intro , .email {
+    font-family: 'Torre Farfan', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
+    margin: 5vh 10%;
+    font-size: calc(.75rem + 1vw);
 }
