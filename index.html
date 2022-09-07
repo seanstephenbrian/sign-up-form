@@ -33,40 +33,49 @@
             <p>please fill out the fake form below with your contact information. we will <span class='italic'>never</span> take a look at your order, and we will <span class='italic'>never</span> get back to you, because we do not exist!</p>
         </div>
 
-        <div class="order-title">oeuf frit order form:</div>
+        <div class="order-title">order form</div>
+
+        <aria class="required"></aria>
 
         <div class="form">
 
             <form action="" method="post" id="order-form">
 
                 <div class="container">
+
                     <div class="first-name">
                         <label for="first-name">first name</label>
-                        <input type="text" id="first-name" name="first-name" required>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" minlength="2" required>
                     </div>
 
                     <div class="last-name">
                         <label for="last-name">last name</label>
-                        <input type="text" id="last-name" name="last-name" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith" minlength="1" required>
                     </div>
 
                     <div class="email-input">
                         <label for="email">email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
                     </div>
 
                     <div class="phone">
                         <label for="phone">phone</label>
-                        <input type="tel" id="tel" name="tel">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7891" required>
                     </div>
                 </div>
                 
                 <fieldset>
-                    <legend>which of the following best describes your needs?</legend>
-                        <input type="radio" id="savory" name="type" value="savory">
-                        <label for="savory"><span class="bold">savory:</span> catering, events, pop-ups, etc.</label>
-                        <input type="radio" id="sweet" name="type" value="sweet">
-                        <label for="sweet"><span class="bold">sweet:</span> custom cake & pastry orders</label>
+                    <legend>type of inquiry:</legend>
+                        <div class="options-container">
+                            <div class="savory">
+                                <input type="radio" id="savory" name="type" value="savory">
+                                <label for="savory"><span class="bold">savory:</span> catering, events, pop-ups, etc.</label>
+                            </div>
+                            <div class="sweet">
+                                <input type="radio" id="sweet" name="type" value="sweet">
+                                <label for="sweet"><span class="bold">sweet:</span> custom cake & pastry orders</label>
+                            </div>  
+                        </div>
                 </fieldset>
 
                 <div class="description">
@@ -74,7 +83,7 @@
                     <textarea id="description" name="description" maxlength="500">please use this space to describe your order and/or event in greater detail.</textarea>
                 </div>
 
-                <button type="submit" form="order-form" value="submit">submit request</button>
+                <button type="submit" form="order-form" value="submit">submit your inquiry</button>
 
             </form>
 

@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+:root {
+    -webkit-appearance: none;
+}
+
 @font-face {
     font-family: 'Radius';
     src: url('font/radius/radius.ttf') format('truetype');
@@ -102,7 +106,6 @@ body {
 }
 
 .right-column {
-    padding-top: calc(1rem + 1vh);
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -113,14 +116,36 @@ body {
 .intro , .email {
     font-family: 'Torre Farfan', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
     margin: 5vh 10%;
-    font-size: calc(1rem + .5vw);
+    font-size: calc(.9rem + .4vw);
+}
+
+.intro {
+    margin: 5vh 10% 3vh;
+}
+
+.email {
+    margin: 5vh 10% 0;
 }
 
 .order-title {
     font-family: 'Radius', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
-    margin: 0 10% 3vh 10%;
+    margin: 0 10%;
     font-size: calc(1rem + 1.5vw);
-    font-style: italic;
+}
+
+.required {
+    margin-left: 10%;
+    margin-bottom: 3vh;
+    font-family: 'Torre Farfan', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
+    font-size: calc(0.rem + 0.2vw);
+}
+
+.required::before {
+    content: "required ";
+}
+
+.required::after {
+    content: url('img/egg-fried.svg');
 }
 
 form {
@@ -152,19 +177,60 @@ form {
     width: calc(.6rem + 15vw);
 }
 
+input , fieldset {
+    border-radius: 5px;
+}
+
+input[type="text"] , input[type="email"] , input[type="tel"] {
+    box-shadow: 1px 1px 3px rgba(51, 184, 78, 0.385);
+    border: 2px solid rgba(0, 0, 0, 0.374);
+}
+
+.container > div > label::after {
+    margin-left: 5px;
+    content: url('img/egg-fried.svg');
+}
+
+.container > div > label[for='phone']::after {
+    content: '';
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+    border: 2px solid rgba(214, 60, 60, 0.671);
+}
+
+input:valid {
+    border: 2px solid rgba(17, 116, 32, 0.632);
+}
+
 fieldset {
-    width: calc(4rem + 32vw);
+    width: calc(3rem + 31vw);
     border: 1px solid black;
     position: relative;
     margin-bottom: calc(1rem + 2vh);
+    padding: calc(.2rem + 0.5vw + 0.5vh);
 }
 
 legend {
-    background-color: #ffefc1;
+    font-family: 'Radius', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
+    font-size: calc(.5rem + .3vw + .3vh);
+    color: #ffd863;
+    text-shadow: 0 0 5px black;
+    background-image: url("img/detail-1.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 4px;
 }
 
 fieldset label {
     font-size: calc(0.7rem + 0.4vw);
+}
+
+.options-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
 .description {
@@ -185,5 +251,19 @@ textarea {
 }
 
 button {
-    border-radius: .7rem;
+    font-family: 'Radius', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
+    font-size: calc(.8rem + .4vw + .4vh);
+    color: #ffd863;
+    text-shadow: 0 0 3px black;
+    background-image: url("img/detail-2.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+button:active , button:hover {
+    color: transparent;
+    text-shadow: none;
+    background-image: url("img/detail-3.jpg");
 }
