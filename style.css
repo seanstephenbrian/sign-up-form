@@ -115,16 +115,15 @@ body {
 
 .intro , .email {
     font-family: 'Torre Farfan', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
-    margin: 5vh 10%;
     font-size: calc(.9rem + .4vw);
 }
 
 .intro {
-    margin: 5vh 10% 3vh;
+    margin: 4vh 10% 3vh;
 }
 
 .email {
-    margin: 5vh 10% 0;
+    margin: 3vh 10%;
 }
 
 .order-title {
@@ -177,16 +176,30 @@ form {
     width: calc(.6rem + 15vw);
 }
 
-input , fieldset {
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+fieldset {
+    appearance: none;
     border-radius: 5px;
+    outline: none;
 }
 
-input[type="text"] , input[type="email"] , input[type="tel"] {
-    box-shadow: 1px 1px 3px rgba(51, 184, 78, 0.385);
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+textarea {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.134);
     border: 2px solid rgba(0, 0, 0, 0.374);
+    background: #fef4d3;
 }
 
 .container > div > label::after {
+    margin-left: 5px;
+    content: url('img/egg-fried.svg');
+}
+
+label[for="description"]::after {
     margin-left: 5px;
     content: url('img/egg-fried.svg');
 }
@@ -195,13 +208,22 @@ input[type="text"] , input[type="email"] , input[type="tel"] {
     content: '';
 }
 
-input:not(:placeholder-shown):not(:focus):invalid {
-    border: 2px solid rgba(214, 60, 60, 0.671);
+input:not(:placeholder-shown):not(:focus):invalid,
+textarea:not(:placeholder-shown):not(:focus):invalid {
+    border: 2px solid rgba(222, 46, 46, 0.862);
 }
 
-input:valid {
-    border: 2px solid rgba(17, 116, 32, 0.632);
+input:valid:not(input[type="tel"]):not(input[type="radio"]),
+input:focus:valid:not(input[type="tel"]):not(input[type="radio"]),
+textarea:not(:placeholder-shown):valid {
+    border: 2px solid rgba(34, 174, 50, 0.834);
 }
+
+input:focus,
+textarea:focus:invalid {
+    border: 2px solid #fbad4d;
+}
+
 
 fieldset {
     width: calc(3rem + 31vw);
@@ -214,10 +236,8 @@ fieldset {
 legend {
     font-family: 'Radius', Helvetica, 'Open Sans', 'Courier New', Courier, monospace;
     font-size: calc(.5rem + .3vw + .3vh);
-    color: #ffd863;
-    text-shadow: 0 0 5px black;
-    background-image: url("img/detail-1.jpg");
-    background-size: cover;
+    color: black;
+    background-color: #ffd86399;
     border-radius: 5px;
     border: 1px solid black;
     padding: 4px;
@@ -233,6 +253,25 @@ fieldset label {
     gap: 1.5rem;
 }
 
+input[type="radio"] {
+    appearance: none;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    border: .1rem solid rgba(0, 0, 0, 0.438);
+    position: relative;
+    top: .1rem;
+    background: #fef4d3;
+    transition: 0.1s linear;
+}
+
+input[type="radio"]:checked {
+    border: .3rem solid rgba(66, 184, 82, 0.834);
+    background: #cfb9ff;
+    box-shadow: 0 0 .3rem .3rem #ffd863;
+}
+
+
 .description {
     display: flex;
     flex-direction: column;
@@ -245,6 +284,8 @@ fieldset label {
 }
 
 textarea {
+    border-radius: .2rem;
+    outline: none;
     resize: none;
     width: calc(4rem + 32vw);
     min-height: 20vh; 
@@ -263,7 +304,10 @@ button {
 }
 
 button:active , button:hover {
-    color: transparent;
-    text-shadow: none;
     background-image: url("img/detail-3.jpg");
+    box-shadow: 0 0 5px 5px rgba(82, 209, 82, 0.666);
+    border: 1px solid #ffd863;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: linear .1s;
 }

@@ -45,12 +45,12 @@
 
                     <div class="first-name">
                         <label for="first-name">first name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="John" minlength="2" required>
+                        <input type="text" id="first-name" name="first-name" placeholder="John" minlength="2" pattern="[a-zA-Z]+" required>
                     </div>
 
                     <div class="last-name">
                         <label for="last-name">last name</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Smith" minlength="1" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Smith" minlength="1" pattern="[a-zA-Z]+" required>
                     </div>
 
                     <div class="email-input">
@@ -60,7 +60,7 @@
 
                     <div class="phone">
                         <label for="phone">phone</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7891" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7891">
                     </div>
                 </div>
                 
@@ -68,11 +68,11 @@
                     <legend>type of inquiry:</legend>
                         <div class="options-container">
                             <div class="savory">
-                                <input type="radio" id="savory" name="type" value="savory">
+                                <input type="radio" id="savory" name="type" value="savory" checked="checked" required>
                                 <label for="savory"><span class="bold">savory:</span> catering, events, pop-ups, etc.</label>
                             </div>
                             <div class="sweet">
-                                <input type="radio" id="sweet" name="type" value="sweet">
+                                <input type="radio" id="sweet" name="type" value="sweet" required>
                                 <label for="sweet"><span class="bold">sweet:</span> custom cake & pastry orders</label>
                             </div>  
                         </div>
@@ -80,7 +80,7 @@
 
                 <div class="description">
                     <label for="description">additional info:</label>
-                    <textarea id="description" name="description" maxlength="500">please use this space to describe your order and/or event in greater detail.</textarea>
+                    <textarea id="description" name="description" minlength="1" maxlength="500" placeholder="please use this space to describe your order and/or event in greater detail." required></textarea>
                 </div>
 
                 <button type="submit" form="order-form" value="submit">submit your inquiry</button>
