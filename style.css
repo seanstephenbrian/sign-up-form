@@ -189,9 +189,15 @@ input[type="text"],
 input[type="email"], 
 input[type="tel"],
 textarea {
+    font-family: Helvetica, 'Open Sans', Arial;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.134);
     border: 2px solid rgba(0, 0, 0, 0.374);
     background: #fef4d3;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container > div > label::after {
@@ -211,10 +217,15 @@ label[for="description"]::after {
 input:not(:placeholder-shown):not(:focus):invalid,
 textarea:not(:placeholder-shown):not(:focus):invalid {
     border: 2px solid rgba(222, 46, 46, 0.862);
+    background-color: rgba(219, 15, 15, 0.268);
 }
 
 input:valid:not(input[type="tel"]):not(input[type="radio"]),
-input:focus:valid:not(input[type="tel"]):not(input[type="radio"]),
+input:focus:valid:not(input[type="tel"]):not(input[type="radio"]) {
+    border: 2px solid rgba(34, 174, 50, 0.834);
+    background-color: rgba(0, 255, 30, 0.167);
+}
+
 textarea:not(:placeholder-shown):valid {
     border: 2px solid rgba(34, 174, 50, 0.834);
 }
