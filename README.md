@@ -6,4 +6,4 @@ I created this page as my submission for the Odin Project's "sign-up form" assig
 
 I wanted to create a very pleasant and professional design here. I used soft colors (selected to harmonize with the left-side background image, a painting by the Swedish artist Hanna Hirsch-Pauli), custom fonts, and a couple little dynamic flourishes. Overall, I'm really happy with the way it turned out and plan to further explore this sort of clean and gentle visual aesthetic.
 
-<img src="screenshot.png" alt="Screenshot of the finished page">
+<img src="https://raw.githubusercontent.com/seanstephenbrian/sign-up-form/main/img/screenshot.png" alt="Screenshot of the finished page">
